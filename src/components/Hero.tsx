@@ -76,7 +76,7 @@
 //           filter:         'saturate(0.75) brightness(0.9)',
 //         }}
 //       >
-//         <source src="/video/hero.mp4" type="video/mp4" />
+//         <source src="https://res.cloudinary.com/drqhlvcvv/video/upload/v1780246462/hero_a4narq.mp4" type="video/mp4" />
 //       </video>
 
 //       {/* Gradient overlay */}
@@ -286,7 +286,7 @@ export default function Hero() {
           filter:         'saturate(0.75) brightness(0.9)',
         }}
       >
-        <source src="/video/hero.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/drqhlvcvv/video/upload/v1780246462/hero_a4narq.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient overlay */}
