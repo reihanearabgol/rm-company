@@ -2,42 +2,39 @@
 
 import { useState, useEffect } from 'react'
 
-const FAQS = [
-  {
-    q: 'How long does a typical renovation take?',
-    a: 'Timeline varies by project scope. A full-home renovation typically takes 4-8 months. Kitchen and bathroom renovations range from 6-12 weeks. We provide a detailed schedule during the planning phase.',
-  },
-  {
-    q: 'Do you manage all contractors and trades?',
-    a: 'Yes. We manage the entire process, including architects, structural engineers, electricians, plumbers, and specialty tradespeople. You have one point of contact throughout.',
-  },
-  {
-    q: 'Can I stay in my home during renovation?',
-    a: 'It depends on the scope of work. We can often phase projects to allow you to remain at home. For full renovations, temporary relocation is sometimes recommended for comfort and safety.',
-  },
-  {
-    q: 'What is included in the initial consultation?',
-    a: 'The complimentary discovery call includes a walkthrough of your space, a discussion of your vision and goals, an overview of the process, and a preliminary budget conversation. No obligation.',
-  },
-  {
-    q: 'What does the 5-year guarantee cover?',
-    a: 'Our guarantee covers all workmanship defects, installation errors, and material failures under normal use conditions. We return promptly to address any issues at no cost to you.',
-  },
-  {
-    q: 'Do you take on projects outside Toronto?',
-    a: 'We primarily serve the Greater Toronto Area, but we take on select projects across Southern Ontario. Contact us to discuss your location.',
-  },
+interface FAQItem {
+  id: string
+  question: string
+  answer: string
+}
+
+const DEFAULT_FAQS = [
+  { id: '1', question: 'How long does a typical renovation take?', answer: 'Timeline varies by project scope. A full-home renovation typically takes 4-8 months. Kitchen and bathroom renovations range from 6-12 weeks. We provide a detailed schedule during the planning phase.' },
+  { id: '2', question: 'Do you manage all contractors and trades?', answer: 'Yes. We manage the entire process, including architects, structural engineers, electricians, plumbers, and specialty tradespeople. You have one point of contact throughout.' },
+  { id: '3', question: 'Can I stay in my home during renovation?', answer: 'It depends on the scope of work. We can often phase projects to allow you to remain at home. For full renovations, temporary relocation is sometimes recommended for comfort and safety.' },
+  { id: '4', question: 'What is included in the initial consultation?', answer: 'The complimentary discovery call includes a walkthrough of your space, a discussion of your vision and goals, an overview of the process, and a preliminary budget conversation. No obligation.' },
+  { id: '5', question: 'What does the 5-year guarantee cover?', answer: 'Our guarantee covers all workmanship defects, installation errors, and material failures under normal use conditions. We return promptly to address any issues at no cost to you.' },
+  { id: '6', question: 'Do you take on projects outside Toronto?', answer: 'We primarily serve the Greater Toronto Area, but we take on select projects across Southern Ontario. Contact us to discuss your location.' },
 ]
 
-export default function FAQ() {
+interface FAQProps {
+  items?: FAQItem[]
+}
+
+export default function FAQ({ items }: FAQProps) {
   const [open, setOpen] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
+
+  const faqs = items && items.length > 0
+    ? items.map(item => ({ q: item.question, a: item.answer }))
+    : DEFAULT_FAQS.map(item => ({ q: item.question, a: item.answer }))
 
   const toggle = (i: number) => setOpen(prev => prev === i ? null : i)
 
@@ -55,7 +52,6 @@ export default function FAQ() {
       `}</style>
 
       <div style={{ maxWidth: '1320px', margin: '0 auto' }}>
-
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
           <div style={{ width: '30px', height: '1px', background: '#c9a96e' }} />
           <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#c9a96e' }}>
@@ -68,10 +64,8 @@ export default function FAQ() {
         </h2>
 
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 380px', gap: isMobile ? '0' : '6rem', alignItems: 'start' }}>
-
-          {/* Left accordion */}
           <div>
-            {FAQS.map((faq, i) => {
+            {faqs.map((faq, i) => {
               const isOpen = open === i
               return (
                 <div key={i} className="faq-item">
@@ -95,7 +89,6 @@ export default function FAQ() {
             })}
           </div>
 
-          {/* Right contact card — hidden on mobile */}
           {!isMobile && (
             <div style={{ background: '#1c1b19', border: '1px solid rgba(201,169,110,0.15)', padding: '2.5rem', position: 'sticky', top: '120px' }}>
               <div style={{ width: '30px', height: '1px', background: '#c9a96e', marginBottom: '1.5rem' }} />
@@ -123,7 +116,6 @@ export default function FAQ() {
               </p>
             </div>
           )}
-
         </div>
       </div>
     </section>
