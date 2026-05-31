@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Cursor from '@/components/Cursor'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'R&M Company — Luxury Renovation',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body>
         {children}
         <Cursor />
+        <Analytics />
       </body>
     </html>
   )
