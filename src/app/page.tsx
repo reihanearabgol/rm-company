@@ -20,6 +20,8 @@ export default async function Home() {
       <Navbar />
       <Hero
         headline={content.hero.headline}
+        subheadline={content.hero.subheadline}
+        subheadline={content.hero.subheadline}
         description={content.hero.description}
         ctaPrimary={content.hero.ctaPrimary}
         ctaSecondary={content.hero.ctaSecondary}
