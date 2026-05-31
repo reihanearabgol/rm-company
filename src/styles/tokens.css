@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════
+   MAISON ATELIER — DESIGN TOKENS
+   Single source of truth for all visual decisions.
+   Nothing is hardcoded in components — everything
+   references these variables.
+═══════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ─────────────────────────────────────────────────
+     TYPOGRAPHY
+     Cormorant Garamond → editorial، luxury، architectural
+     DM Sans            → clean، modern، readable UI
+  ───────────────────────────────────────────────── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'DM Sans', system-ui, -apple-system, sans-serif;
+
+
+  /* ─────────────────────────────────────────────────
+     COLOR PALETTE
+
+     چرا obsidian و نه #000000؟
+     سیاه خالص روی صفحه harsh و بی‌روح‌ه.
+     obsidian گرم‌ه — چشم راحت‌تر روش استراحت می‌کنه.
+
+     چرا ivory و نه #ffffff؟
+     سفید خالص روی تاریک خیلی contrast داره.
+     ivory نرم‌تر، luxury‌تر، و خواناتره.
+
+     طلا (#c9a96e) فقط accent‌ه — نه decoration.
+     یعنی فقط برای تاکید، نه fill کردن فضا.
+  ───────────────────────────────────────────────── */
+
+  /* Backgrounds */
+  --color-obsidian:    #0a0908;   /* main background */
+  --color-charcoal:    #161513;   /* section alt bg */
+  --color-ash:         #252320;   /* card، hover surface */
+  --color-ash-light:   #2e2c29;   /* subtle borders */
+
+  /* Text */
+  --color-ivory:       #f5f0e8;   /* primary text */
+  --color-ivory-dim:   #cec8be;   /* secondary headings */
+  --color-mist:        #8a8278;   /* body text، captions */
+  --color-mist-light:  #a09890;   /* placeholder text */
+
+  /* Gold — accent only */
+  --color-gold:        #c9a96e;   /* primary accent */
+  --color-gold-light:  #e8d5b0;   /* italic em، highlight */
+  --color-gold-dark:   #9a7a45;   /* hover، active */
+
+  /* Gold with opacity — for borders و overlays */
+  --color-gold-subtle: rgba(201, 169, 110, 0.08);
+  --color-gold-border: rgba(201, 169, 110, 0.18);
+  --color-gold-glow:   rgba(201, 169, 110, 0.06);
+
+
+  /* ─────────────────────────────────────────────────
+     SPACING SYSTEM — 8px Grid
+     همه فاصله‌ها مضرب ۸ هستن.
+     این باعث می‌شه rhythm بصری یکنواخت باشه.
+  ───────────────────────────────────────────────── */
+  --space-1:   0.25rem;    /*  4px */
+  --space-2:   0.5rem;     /*  8px */
+  --space-3:   0.75rem;    /* 12px */
+  --space-4:   1rem;       /* 16px */
+  --space-5:   1.25rem;    /* 20px */
+  --space-6:   1.5rem;     /* 24px */
+  --space-8:   2rem;       /* 32px */
+  --space-10:  2.5rem;     /* 40px */
+  --space-12:  3rem;       /* 48px */
+  --space-16:  4rem;       /* 64px */
+  --space-20:  5rem;       /* 80px */
+  --space-24:  6rem;       /* 96px */
+  --space-32:  8rem;       /* 128px */
+
+
+  /* ─────────────────────────────────────────────────
+     SECTION RHYTHM
+     clamp() = fluid — بدون breakpoint زیاد.
+     روی 320px موبایل و 1920px دسکتاپ هر دو درست‌ه.
+  ───────────────────────────────────────────────── */
+  --section-padding-v: clamp(5rem, 10vw, 9rem);
+  --section-padding-h: clamp(1.5rem, 5vw, 5rem);
+
+
+  /* ─────────────────────────────────────────────────
+     CONTAINER
+  ───────────────────────────────────────────────── */
+  --container-max:     1320px;
+  --container-padding: var(--section-padding-h);
+
+
+  /* ─────────────────────────────────────────────────
+     TYPOGRAPHY SCALE — Fluid
+     clamp(min, preferred, max)
+     min    = موبایل
+     max    = دسکتاپ بزرگ
+  ───────────────────────────────────────────────── */
+
+  /* Display — Cormorant Garamond */
+  --text-display-2xl: clamp(3.5rem, 8vw,  7rem);     /* Hero headline */
+  --text-display-xl:  clamp(3rem,   6.5vw, 6rem);    /* Section hero */
+  --text-display-l:   clamp(2.2rem, 4.5vw, 3.5rem);  /* Section title */
+  --text-display-m:   clamp(1.6rem, 2.8vw, 2.2rem);  /* Card title */
+  --text-display-s:   clamp(1.3rem, 2vw,   1.75rem); /* Small heading */
+
+  /* Body — DM Sans */
+  --text-body-l:   1.0625rem;  /* 17px — large body */
+  --text-body-m:   0.9375rem;  /* 15px — default body */
+  --text-body-s:   0.875rem;   /* 14px — small body */
+
+  /* Label — DM Sans uppercase */
+  --text-label:    0.625rem;   /* 10px — always uppercase + tracked */
+  --text-label-l:  0.6875rem;  /* 11px — slightly larger label */
+
+
+  /* ─────────────────────────────────────────────────
+     LINE HEIGHTS
+  ───────────────────────────────────────────────── */
+  --leading-display: 1.02;   /* tight — for large editorial headings */
+  --leading-heading: 1.15;   /* slightly more room */
+  --leading-body:    1.75;   /* comfortable reading */
+  --leading-label:   1;      /* labels are single line */
+
+
+  /* ─────────────────────────────────────────────────
+     LETTER SPACING
+  ───────────────────────────────────────────────── */
+  --tracking-tight:   -0.02em;  /* large display headings */
+  --tracking-normal:   0;
+  --tracking-wide:     0.08em;
+  --tracking-label:    0.22em;  /* uppercase labels — خیلی مهمه */
+  --tracking-button:   0.18em;
+
+
+  /* ─────────────────────────────────────────────────
+     BORDER RADIUS
+     این سایت architectural‌ه — گوشه‌ها تیزن.
+     فقط در موارد خاص radius داریم.
+  ───────────────────────────────────────────────── */
+  --radius-none:   0;
+  --radius-sm:     2px;
+  --radius-circle: 9999px;
+
+
+  /* ─────────────────────────────────────────────────
+     MOTION SYSTEM
+
+     ease-luxury  → smooth، elegant، نه mechanical
+     ease-expo    → fast start، gentle land — برای reveals
+     ease-cinema  → dramatic، slow in و out — برای hero
+     ease-spring  → organic feel — برای hover
+
+     چرا custom easings؟
+     linear و ease-in-out جعلی و ارزون به نظر می‌رسن.
+     این easing‌ها از Apple و high-end studio sites گرفته شدن.
+  ───────────────────────────────────────────────── */
+  --ease-luxury:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cinema:  cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant:   150ms;
+  --duration-fast:      250ms;
+  --duration-medium:    500ms;
+  --duration-slow:      800ms;
+  --duration-cinematic: 1200ms;
+  --duration-epic:      2000ms;
+
+
+  /* ─────────────────────────────────────────────────
+     SHADOWS
+  ───────────────────────────────────────────────── */
+  --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 0 40px rgba(201, 169, 110, 0.12);
+
+
+  /* ─────────────────────────────────────────────────
+     Z-INDEX SCALE
+     داشتن scale مشخص از بهم ریختن z-index جلوگیری می‌کنه.
+  ───────────────────────────────────────────────── */
+  --z-base:     0;
+  --z-above:    10;
+  --z-overlay:  100;
+  --z-menu:     190;
+  --z-navbar:   200;
+  --z-cursor:   9999;
+
+}

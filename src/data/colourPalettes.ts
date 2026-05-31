@@ -1,0 +1,165 @@
+export interface Colour {
+  id: string
+  name: string
+  hex: string
+  mood: string
+  finish: 'Matte' | 'Eggshell' | 'Satin'
+  rooms: string[]
+}
+
+export interface ColourFamily {
+  id: string
+  name: string
+  rep: string
+  colours: Colour[]
+}
+
+export const COLOUR_FAMILIES: ColourFamily[] = [
+  {
+    id: 'warm-whites',
+    name: 'Warm Whites',
+    rep: '#f5ede0',
+    colours: [
+      { id: 'ww-01', name: 'Ghost White',    hex: '#f7f3ee', mood: 'The purest warmth. Barely-there colour that opens any space.', finish: 'Eggshell', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'ww-02', name: 'Morning Mist',   hex: '#f3ede5', mood: 'Haze of early morning. Serene and meditative.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'ww-03', name: 'Ivory Mist',     hex: '#ede8dc', mood: 'Whisper-soft. Pairs with every material and finish.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'ww-04', name: 'Antique Lace',   hex: '#f5ede0', mood: 'Soft and inviting — the warmth of natural linen.', finish: 'Eggshell', rooms: ['Kitchen', 'Bedroom'] },
+      { id: 'ww-05', name: 'Cream Pearl',    hex: '#f2e8d8', mood: 'Luminous and light. Opens any space with quiet elegance.', finish: 'Satin', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'ww-06', name: 'Vanilla Stone',  hex: '#f0e8d5', mood: 'Warm and honeyed. Pairs beautifully with dark walnut.', finish: 'Eggshell', rooms: ['Kitchen', 'Bedroom'] },
+      { id: 'ww-07', name: 'Parchment',      hex: '#ede5d8', mood: 'Timeless and refined. A classic architectural backdrop.', finish: 'Eggshell', rooms: ['Living Room', 'Bedroom'] },
+      { id: 'ww-08', name: 'Warm Chalk',     hex: '#e9e2d8', mood: 'Studio-white with warmth beneath the surface.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+      { id: 'ww-09', name: 'Pearl Dust',     hex: '#ece4d8', mood: 'Pearlescent warmth. Subtle shimmer in natural light.', finish: 'Satin', rooms: ['Bathroom', 'Living Room'] },
+      { id: 'ww-10', name: 'Bone',           hex: '#e8dfd2', mood: 'Clean yet warm. Understated architectural restraint.', finish: 'Matte', rooms: ['Bathroom', 'Kitchen'] },
+      { id: 'ww-11', name: 'Linen Dust',     hex: '#e2d9cc', mood: 'The colour of raw linen — honest, natural luxury.', finish: 'Eggshell', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'ww-12', name: 'White Sand',     hex: '#ede5d5', mood: 'Coastal calm. The simplicity of sun-bleached shorelines.', finish: 'Satin', rooms: ['Bathroom', 'Exterior'] },
+      { id: 'ww-13', name: 'Raw Linen',      hex: '#ddd4c4', mood: 'Honest texture translated into colour. Artisanal warmth.', finish: 'Matte', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'ww-14', name: 'Oat',            hex: '#d8c8b0', mood: 'Fresh and clean with a warm undertone. Versatile.', finish: 'Eggshell', rooms: ['Kitchen', 'Bedroom'] },
+    ],
+  },
+  {
+    id: 'soft-neutrals',
+    name: 'Soft Neutrals',
+    rep: '#c8b898',
+    colours: [
+      { id: 'sn-01', name: 'Sand Dollar',    hex: '#e8dcc8', mood: 'Light and airy with unexpected mineral depth.', finish: 'Eggshell', rooms: ['Bathroom', 'Bedroom'] },
+      { id: 'sn-02', name: 'Soft Beige',     hex: '#e0d0b8', mood: 'Grounded and versatile. The timeless luxury foundation.', finish: 'Eggshell', rooms: ['Living Room', 'Bedroom'] },
+      { id: 'sn-03', name: 'Wheat',          hex: '#d8c8a8', mood: 'Honeyed and rich. Pairs with dark woods and brass.', finish: 'Eggshell', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'sn-04', name: 'Warm Stone',     hex: '#d0c0a0', mood: 'Earthy and sophisticated. Natural warmth in every light.', finish: 'Matte', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'sn-05', name: 'Amber Haze',     hex: '#c8b090', mood: 'Golden warmth beneath a neutral surface. Rich and layered.', finish: 'Eggshell', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'sn-06', name: 'Cashmere',       hex: '#c8b8a0', mood: 'Luxuriously neutral. The colour of quiet confidence.', finish: 'Satin', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'sn-07', name: 'Pebble',         hex: '#b8a888', mood: 'Smooth and grounded. The colour of river stones at dusk.', finish: 'Satin', rooms: ['Bathroom', 'Bedroom'] },
+      { id: 'sn-08', name: 'Sandstone',      hex: '#c0a888', mood: 'Desert warmth meets refined living. Organic and bold.', finish: 'Matte', rooms: ['Exterior', 'Living Room'] },
+      { id: 'sn-09', name: 'Putty',          hex: '#b8a888', mood: 'Muted and architectural. Urban refinement.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+      { id: 'sn-10', name: 'Driftwood',      hex: '#b0a080', mood: 'Weathered elegance. The quiet beauty of coastal restraint.', finish: 'Satin', rooms: ['Exterior', 'Living Room'] },
+      { id: 'sn-11', name: 'Raw Linen',      hex: '#a89870', mood: 'Honest texture in colour form. Warm and artisanal.', finish: 'Matte', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'sn-12', name: 'Khaki',          hex: '#a09070', mood: 'Military-inspired restraint. Warm and dependable.', finish: 'Eggshell', rooms: ['Exterior', 'Bedroom'] },
+      { id: 'sn-13', name: 'Desert',         hex: '#988870', mood: 'Sun-bleached and timeless. Quiet mineral warmth.', finish: 'Matte', rooms: ['Exterior', 'Living Room'] },
+      { id: 'sn-14', name: 'Tobacco',        hex: '#908060', mood: 'Warm and grounding. The depth of aged wood.', finish: 'Satin', rooms: ['Bedroom', 'Kitchen'] },
+    ],
+  },
+  {
+    id: 'beige-taupe',
+    name: 'Beige & Taupe',
+    rep: '#7a6a58',
+    colours: [
+      { id: 'bt-01', name: 'Clay Dust',      hex: '#c8b0a0', mood: 'Warm terracotta softened to an elegant neutral.', finish: 'Eggshell', rooms: ['Exterior', 'Bathroom'] },
+      { id: 'bt-02', name: 'Suede',          hex: '#b8a090', mood: 'Tactile warmth in colour form. Luxurious and inviting.', finish: 'Eggshell', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'bt-03', name: 'Dune',           hex: '#a89080', mood: 'Sand and shadow. Desert minimalism at golden hour.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+      { id: 'bt-04', name: 'Toffee',         hex: '#987060', mood: 'Sweet warmth layered with caramel depth.', finish: 'Satin', rooms: ['Kitchen', 'Bathroom'] },
+      { id: 'bt-05', name: 'Cocoa',          hex: '#906858', mood: 'Warm brown with grey sophistication. Enduring.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'bt-06', name: 'Sienna Dusk',    hex: '#886050', mood: 'Sun-baked warmth. The spirit of Mediterranean architecture.', finish: 'Satin', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'bt-07', name: 'Deep Taupe',     hex: '#806050', mood: 'Warm and sophisticated. The perfect luxury backdrop.', finish: 'Satin', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'bt-08', name: 'Mocha',          hex: '#785848', mood: 'Rich espresso tone. Deeply luxurious and grounding.', finish: 'Satin', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'bt-09', name: 'Truffle',        hex: '#705848', mood: 'Rare and refined. Depth that commands attention.', finish: 'Satin', rooms: ['Bedroom', 'Kitchen'] },
+      { id: 'bt-10', name: 'Raw Umber',      hex: '#705040', mood: 'Earthy and intense. Pairs magnificently with gold.', finish: 'Matte', rooms: ['Living Room', 'Bedroom'] },
+      { id: 'bt-11', name: 'Bark',           hex: '#685040', mood: 'The deep brown of ancient timber. Elemental.', finish: 'Matte', rooms: ['Exterior', 'Living Room'] },
+      { id: 'bt-12', name: 'Espresso',       hex: '#604840', mood: 'Deep and grounding. Bold choice for intimate spaces.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'bt-13', name: 'Bittersweet',    hex: '#584038', mood: 'Dark chocolate warmth. Dramatic and enveloping.', finish: 'Matte', rooms: ['Bedroom', 'Kitchen'] },
+      { id: 'bt-14', name: 'Dark Earth',     hex: '#503830', mood: 'The deepest earth tone. Primitive and luxurious.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+    ],
+  },
+  {
+    id: 'sage-greens',
+    name: 'Sage Greens',
+    rep: '#8a9e8a',
+    colours: [
+      { id: 'sg-01', name: 'Pale Herb',      hex: '#d0d8c8', mood: 'Fresh and light. The pale green of morning herb gardens.', finish: 'Eggshell', rooms: ['Kitchen', 'Bathroom'] },
+      { id: 'sg-02', name: 'Willow',         hex: '#c0c8b0', mood: 'Soft silvery green. Ethereal calm in every season.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'sg-03', name: 'Celadon',        hex: '#b0b8a8', mood: 'Porcelain-inspired. A delicate green for refined spaces.', finish: 'Satin', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'sg-04', name: 'Sage Mist',      hex: '#a8b8a0', mood: 'Calm and organic. A breath of nature refined.', finish: 'Matte', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'sg-05', name: 'Eucalyptus',     hex: '#9aae9a', mood: 'Botanical serenity. Private garden at dawn.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'sg-06', name: 'Thyme',          hex: '#909880', mood: 'The muted green of culinary gardens. Warm, grounded.', finish: 'Matte', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'sg-07', name: 'Lichen',         hex: '#889080', mood: 'Ancient and mossy. Quiet sophistication from stone.', finish: 'Matte', rooms: ['Kitchen', 'Exterior'] },
+      { id: 'sg-08', name: 'Fern Grey',      hex: '#808878', mood: 'Muted green with cool grey depth. Understated.', finish: 'Eggshell', rooms: ['Living Room', 'Bedroom'] },
+      { id: 'sg-09', name: 'Jade Smoke',     hex: '#788078', mood: 'Cool green with silver undertones. Contemporary.', finish: 'Satin', rooms: ['Bathroom', 'Kitchen'] },
+      { id: 'sg-10', name: 'Olive Dust',     hex: '#788068', mood: 'Warm olive. Pairs with brass and oak beautifully.', finish: 'Satin', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'sg-11', name: 'Moss Stone',     hex: '#707868', mood: 'Ancient walls. Timeless and deeply atmospheric.', finish: 'Matte', rooms: ['Exterior', 'Bedroom'] },
+      { id: 'sg-12', name: 'Forest Haze',    hex: '#687060', mood: 'Dense botanical. Dramatic, organic, commanding.', finish: 'Matte', rooms: ['Exterior', 'Living Room'] },
+      { id: 'sg-13', name: 'Evergreen',      hex: '#586858', mood: 'Deep botanical. The quiet dignity of old growth.', finish: 'Matte', rooms: ['Exterior', 'Bedroom'] },
+      { id: 'sg-14', name: 'Hunter',         hex: '#486050', mood: 'Classic hunter green elevated to luxury.', finish: 'Matte', rooms: ['Exterior', 'Kitchen'] },
+    ],
+  },
+  {
+    id: 'stone-greys',
+    name: 'Stone Greys',
+    rep: '#909090',
+    colours: [
+      { id: 'stg-01', name: 'Moonstone',     hex: '#d8d8e0', mood: 'Pale luminous grey. Calm as reflected moonlight.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'stg-02', name: 'Silver Birch',  hex: '#c8c8c0', mood: 'The pale bark of birch trees. Nordic calm.', finish: 'Satin', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'stg-03', name: 'Fog',           hex: '#c0c0c8', mood: 'Morning fog captured in paint. Elusive, atmospheric.', finish: 'Eggshell', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'stg-04', name: 'Clay Grey',     hex: '#b8b0a8', mood: 'Grey with warm clay undertones. Organic and liveable.', finish: 'Eggshell', rooms: ['Living Room', 'Bedroom'] },
+      { id: 'stg-05', name: 'Ash',           hex: '#b0b0a8', mood: 'The soft grey of wood ash. Quiet, contemplative.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+      { id: 'stg-06', name: 'Stone Grey',    hex: '#a8a8a0', mood: 'Quintessential neutral. Pairs with everything.', finish: 'Eggshell', rooms: ['Living Room', 'Exterior'] },
+      { id: 'stg-07', name: 'Warm Slate',    hex: '#989098', mood: 'Grey with warm violet undertone. Sophisticated.', finish: 'Matte', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'stg-08', name: 'Pebble Shore',  hex: '#989090', mood: 'Smoothed river stones. Natural and grounding.', finish: 'Eggshell', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'stg-09', name: 'Concrete',      hex: '#888888', mood: 'Industrial material elevated to luxury aesthetic.', finish: 'Matte', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'stg-10', name: 'Steel',         hex: '#808890', mood: 'Cool blue-grey of brushed steel. Precise, modern.', finish: 'Satin', rooms: ['Kitchen', 'Exterior'] },
+      { id: 'stg-11', name: 'Pewter',        hex: '#787878', mood: 'The weight of pewter in colour form. Dense, refined.', finish: 'Satin', rooms: ['Kitchen', 'Bathroom'] },
+      { id: 'stg-12', name: 'Granite',       hex: '#686868', mood: 'Polished granite depth. Strong and enduring.', finish: 'Matte', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'stg-13', name: 'Slate Night',   hex: '#585860', mood: 'Cool dark with blue depth. Architectural, precise.', finish: 'Matte', rooms: ['Exterior', 'Bedroom'] },
+      { id: 'stg-14', name: 'Flint',         hex: '#505058', mood: 'The dark grey of struck flint. Sharp and elemental.', finish: 'Matte', rooms: ['Exterior', 'Living Room'] },
+    ],
+  },
+  {
+    id: 'charcoal-black',
+    name: 'Charcoal & Black',
+    rep: '#2e2e30',
+    colours: [
+      { id: 'cb-01', name: 'Shadow',         hex: '#484850', mood: 'The grey-black of long shadows. Mysterious, refined.', finish: 'Satin', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'cb-02', name: 'Graphite',       hex: '#404040', mood: 'Warm charcoal with subtle depth. Sophisticated.', finish: 'Eggshell', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'cb-03', name: 'Iron',           hex: '#3a3a3a', mood: 'Industrial strength refined to pure elegance.', finish: 'Satin', rooms: ['Kitchen', 'Exterior'] },
+      { id: 'cb-04', name: 'Charcoal',       hex: '#343434', mood: 'Commanding and timeless. The power of dark luxury.', finish: 'Matte', rooms: ['Bedroom', 'Exterior'] },
+      { id: 'cb-05', name: 'Basalt',         hex: '#2e2e2e', mood: 'Volcanic depth. The colour of ancient force.', finish: 'Eggshell', rooms: ['Exterior', 'Bedroom'] },
+      { id: 'cb-06', name: 'Soot',           hex: '#2a2a2a', mood: 'Warm black. Softer than jet, deeper than charcoal.', finish: 'Eggshell', rooms: ['Kitchen', 'Living Room'] },
+      { id: 'cb-07', name: 'Dark Ash',       hex: '#282828', mood: 'Near black with warm undertone. Bold yet liveable.', finish: 'Matte', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'cb-08', name: 'Charcoal Night', hex: '#262628', mood: 'Deep charcoal with a cool shift. Cinematic.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'cb-09', name: 'Coal Dust',      hex: '#242424', mood: 'The darkest neutral. Commanding quiet authority.', finish: 'Matte', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'cb-10', name: 'Obsidian',       hex: '#202022', mood: 'Absolute depth. Cinematic drama for confident spaces.', finish: 'Matte', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'cb-11', name: 'Midnight',       hex: '#1e2028', mood: 'Deep blue-black. Clear winter midnight.', finish: 'Matte', rooms: ['Bedroom', 'Exterior'] },
+      { id: 'cb-12', name: 'Jet',            hex: '#1c1c1e', mood: 'Pure and absolute darkness. For those who dare.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'cb-13', name: 'Void',           hex: '#181818', mood: 'The edge of black. Total visual authority.', finish: 'Matte', rooms: ['Kitchen', 'Bedroom'] },
+      { id: 'cb-14', name: 'Abyss',          hex: '#141416', mood: 'The deepest possible dark. Absolute luxury.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+    ],
+  },
+  {
+    id: 'accent-colours',
+    name: 'Accent Colours',
+    rep: '#c9a96e',
+    colours: [
+      { id: 'ac-01', name: 'Dusty Rose',     hex: '#d4a8a8', mood: 'Muted blush with romantic restraint. Feminine, refined.', finish: 'Eggshell', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'ac-02', name: 'Copper Dust',    hex: '#c89870', mood: 'Patina of aged copper. Warm metallic luxury.', finish: 'Satin', rooms: ['Kitchen', 'Exterior'] },
+      { id: 'ac-03', name: 'Antique Gold',   hex: '#c9a96e', mood: 'Old brass warmth. A timeless accent for luxury interiors.', finish: 'Satin', rooms: ['Living Room', 'Kitchen'] },
+      { id: 'ac-04', name: 'Burnt Sienna',   hex: '#b87858', mood: 'Warm ochre-red. Italian hill towns at sunset.', finish: 'Satin', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'ac-05', name: 'Terracotta',     hex: '#b07058', mood: 'Mediterranean warmth. Bold, ancient, deeply beautiful.', finish: 'Matte', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'ac-06', name: 'Rust Clay',      hex: '#a06050', mood: 'Raw earth meets modern living. Organic and compelling.', finish: 'Matte', rooms: ['Exterior', 'Kitchen'] },
+      { id: 'ac-07', name: 'Indigo Dusk',    hex: '#606888', mood: 'The blue hour between day and night. Evocative.', finish: 'Matte', rooms: ['Bedroom', 'Bathroom'] },
+      { id: 'ac-08', name: 'Steel Blue',     hex: '#587898', mood: 'Cool confidence. Architectural precision in bold hue.', finish: 'Satin', rooms: ['Bathroom', 'Exterior'] },
+      { id: 'ac-09', name: 'Plum Dust',      hex: '#807888', mood: 'Mysterious and refined. Quiet drama for intimate spaces.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'ac-10', name: 'Midnight Teal',  hex: '#406070', mood: 'Depth of ocean. Refined calm with hidden complexity.', finish: 'Satin', rooms: ['Bathroom', 'Bedroom'] },
+      { id: 'ac-11', name: 'Aubergine',      hex: '#605068', mood: 'Deep purple-black. Decadent and theatrical luxury.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+      { id: 'ac-12', name: 'Forest Deep',    hex: '#485850', mood: 'Dense botanical depth. Grounding, rich, enduring.', finish: 'Matte', rooms: ['Living Room', 'Exterior'] },
+      { id: 'ac-13', name: 'Dark Teal',      hex: '#305058', mood: 'The stillness of deep water. Commanding and calm.', finish: 'Matte', rooms: ['Bathroom', 'Kitchen'] },
+      { id: 'ac-14', name: 'Deep Plum',      hex: '#504058', mood: 'The richest purple. Regal and deeply atmospheric.', finish: 'Matte', rooms: ['Bedroom', 'Living Room'] },
+    ],
+  },
+]
