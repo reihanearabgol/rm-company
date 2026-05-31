@@ -10,6 +10,8 @@ import FAQ          from '@/components/FAQ'
 import FinalCTA     from '@/components/FinalCTA'
 import { getPublishedContent } from '@/lib/cms-client'
 
+export const revalidate = 0
+
 export default async function Home() {
   const content = await getPublishedContent()
 
