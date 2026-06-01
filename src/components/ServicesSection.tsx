@@ -1,3 +1,4 @@
+'use client'
 interface Service {
   id: string
   title: string
