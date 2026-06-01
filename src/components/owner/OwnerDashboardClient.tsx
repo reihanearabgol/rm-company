@@ -334,6 +334,7 @@ export default function OwnerDashboardClient() {
                   { id: 'services', label: '🔨 Services' },
                   { id: 'faq', label: '❓ FAQ' },
                   { id: 'footer', label: '📄 Footer' },
+                  { id: 'stats', label: '📊 Stats' },
                   { id: 'seo', label: '🔍 SEO Settings' },
                 ].map(section => (
                   <button key={section.id} onClick={() => setCmsSection(section.id)} style={{

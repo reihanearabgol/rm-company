@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 
 const FEATURED = {
-  quote: "Maison Atelier transformed our home beyond anything we imagined. Every detail was considered, every material chosen with extraordinary care. The result is a space that feels both timeless and deeply personal.",
+  quote: "R&M Company transformed our home beyond anything we imagined. Every detail was considered, every material chosen with extraordinary care. The result is a space that feels both timeless and deeply personal.",
   author: "Sarah & James K.",
   location: "Rosedale, Toronto",
   project: "Full Home Renovation",
@@ -17,15 +17,36 @@ const TESTIMONIALS = [
   { quote: "We've worked with many contractors over the years. This was a completely different experience — truly white glove.", author: "Robert & Diana M.", location: "Lawrence Park", project: "Basement Finishing", initials: "RM" },
 ]
 
-export default function Testimonials() {
+interface StatsProps {
+  satisfaction?: string
+  projects?: string
+  years?: string
+  review?: string
+}
+
+export default function Testimonials({
+  satisfaction = '98%',
+  projects = '500+',
+  years = '17',
+  review = '5★',
+}: StatsProps) {
   const [active, setActive] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
+
+  const stats = [
+    { num: satisfaction, label: 'Client Satisfaction' },
+    { num: projects, label: 'Projects Completed' },
+    { num: years, label: 'Years of Excellence' },
+    { num: review, label: 'Average Review' },
+  ]
+
   return (
     <section id="testimonials" style={{ background: '#1c1b19', padding: isMobile ? '4rem 1.5rem' : '8rem 4rem', overflow: 'hidden' }}>
       <style>{`.testimonial-mini:hover { border-color: rgba(201,169,110,0.3) !important; background: rgba(201,169,110,0.04) !important; } .testimonial-mini:hover .mini-author { color: #f5f0e8 !important; }`}</style>
@@ -68,8 +89,10 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
+
+        {/* Stats */}
         <div style={{ marginTop: isMobile ? '2.5rem' : '5rem', paddingTop: isMobile ? '2rem' : '3rem', borderTop: '1px solid rgba(201,169,110,0.1)', display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '0' }}>
-          {[{ num: '98%', label: 'Client Satisfaction' }, { num: '500+', label: 'Projects Completed' }, { num: '17', label: 'Years of Excellence' }, { num: '5\u2605', label: 'Average Review' }].map((stat, i) => (
+          {stats.map((stat, i) => (
             <div key={i} style={{ textAlign: 'center', padding: isMobile ? '1.5rem 0' : '0 2rem', borderRight: isMobile ? 'none' : (i < 3 ? '1px solid rgba(201,169,110,0.12)' : 'none'), borderBottom: isMobile ? '1px solid rgba(201,169,110,0.08)' : 'none' }}>
               <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '3rem', fontWeight: 300, color: '#c9a96e', lineHeight: 1, display: 'block', marginBottom: '0.5rem' }}>{stat.num}</span>
               <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#a09890' }}>{stat.label}</span>

@@ -16,6 +16,12 @@ export interface SiteContent {
     copyright: string
     tagline: string
   }
+  stats: {
+    satisfaction: string
+    projects: string
+    years: string
+    review: string
+  }
   services: {
     id: string
     title: string
@@ -49,6 +55,12 @@ export const DEFAULT_CONTENT: SiteContent = {
   footer: {
     copyright: '© 2024 R&M Company. All rights reserved.',
     tagline: 'Luxury Renovation · Toronto',
+  },
+  stats: {
+    satisfaction: '98%',
+    projects: '500+',
+    years: '17',
+    review: '5★',
   },
   services: [
     { id: '1', title: 'Kitchen Renovation', description: 'Complete kitchen transformations with premium materials and expert craftsmanship.' },

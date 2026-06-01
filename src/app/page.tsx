@@ -42,7 +42,12 @@ export default async function Home() {
       <BeforeAfter />
       <WhyChooseUs />
       <Process />
-      <Testimonials />
+      <Testimonials
+        satisfaction={content.stats?.satisfaction}
+        projects={content.stats?.projects}
+        years={content.stats?.years}
+        review={content.stats?.review}
+      />
       <FAQ items={content.faq} />
       <FinalCTA
         phone={content.contact.phone}
