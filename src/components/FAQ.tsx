@@ -101,11 +101,11 @@ export default function FAQ({ items }: FAQProps) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ width: '36px', height: '36px', border: '1px solid rgba(201,169,110,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a96e', fontSize: '0.85rem', flexShrink: 0 }}>✆</div>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#f5f0e8' }}>+1 (250) 884-2728</span>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#f5f0e8' }}>+1 (647) 614-4437</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ width: '36px', height: '36px', border: '1px solid rgba(201,169,110,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a96e', fontSize: '0.85rem', flexShrink: 0 }}>@</div>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#f5f0e8' }}>arabgol.reihane.official@gmail.com</span>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#f5f0e8' }}>shakeri.mojtaba.official@gmail.com</span>
                 </div>
               </div>
               <a href="/consultation" style={{ display: 'block', textAlign: 'center', padding: '1rem 2rem', background: '#c9a96e', color: '#0a0908', fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', textDecoration: 'none', marginBottom: '0.75rem' }}>

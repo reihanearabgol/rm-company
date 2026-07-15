@@ -6,8 +6,8 @@ interface FinalCTAProps {
 }
 
 export default function FinalCTA({
-  phone = '+1 (250) 884-2728',
-  email = 'arabgol.reihane.official@gmail.com',
+  phone = '+1 (647) 614-4437',
+  email = 'shakeri.mojtaba.official@gmail.com',
 }: FinalCTAProps) {
   return (
     <section id="finalcta" style={{ background: '#0a0908', padding: '10rem 4rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>

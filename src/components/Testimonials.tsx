@@ -167,7 +167,7 @@ export default function Testimonials({
               <a href="/consultation" style={{ display: 'inline-block', padding: '0.9rem 2.5rem', background: '#c9a96e', color: '#0a0908', fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>
                 Book Free Consultation
               </a>
-              <a href="tel:+12508842728" style={{ display: 'inline-block', padding: '0.9rem 2.5rem', background: 'transparent', color: '#f5f0e8', fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
+              <a href="tel:+16476144437" style={{ display: 'inline-block', padding: '0.9rem 2.5rem', background: 'transparent', color: '#f5f0e8', fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}>
                 Call Us Now
               </a>
             </div>

@@ -64,8 +64,8 @@ export default function ConsultationPage() {
 
           <div style={{ display:'flex', flexDirection:'column', gap:'1.25rem' }}>
             {[
-              { icon:'✆', label:'+1 (250) 884-2728', href:'sms:+12508842728' },
-              { icon:'@', label:'arabgol.reihane.official@gmail.com', href:'mailto:arabgol.reihane.official@gmail.com' },
+              { icon:'✆', label:'+1 (647) 614-4437', href:'sms:+16476144437' },
+              { icon:'@', label:'shakeri.mojtaba.official@gmail.com', href:'mailto:shakeri.mojtaba.official@gmail.com' },
               { icon:'◎', label:'Toronto, Ontario, Canada', href:'#' },
             ].map(item => (
               <a key={item.label} href={item.href} style={{ display:'flex', alignItems:'center', gap:'1rem', textDecoration:'none' }}

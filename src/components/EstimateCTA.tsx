@@ -123,7 +123,7 @@ export default function EstimateCTA() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
               {[
-                { icon: '✆', text: '+1 (250) 884-2728' },
+                { icon: '✆', text: '+1 (647) 614-4437' },
                 { icon: '@', text: 'hello@maisonatelier.ca' },
                 { icon: '⌖', text: '220 King St W, Suite 410, Toronto' },
               ].map((row) => (

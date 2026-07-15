@@ -19,8 +19,8 @@ export default function ContactPage() {
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px,1fr))', gap: '2px', marginBottom: '4rem' }}>
           {[
-            { label: 'Phone', value: '+1 (250) 884-2728', sub: 'Mon–Fri, 9am–6pm' },
-            { label: 'Email', value: 'arabgol.reihane.official@gmail.com', sub: 'We reply within 4 hours' },
+            { label: 'Phone', value: '+1 (647) 614-4437', sub: 'Mon–Fri, 9am–6pm' },
+            { label: 'Email', value: 'shakeri.mojtaba.official@gmail.com', sub: 'We reply within 4 hours' },
             { label: 'Location', value: 'Toronto, Ontario', sub: 'Greater Toronto Area' },
             { label: 'Working Hours', value: 'Mon – Fri', sub: '9:00 AM – 6:00 PM EST' },
           ].map(item => (

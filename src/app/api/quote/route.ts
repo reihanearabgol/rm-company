@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     // Send email to owner
     await resend.emails.send({
       from: 'R&M Company <onboarding@resend.dev>',
-      to: 'arabgol.reihane.official@gmail.com',
+      to: 'shakeri.mojtaba.official@gmail.com',
       subject: 'New Quote Request — R&M Company',
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #0a0908; color: #e8dcc8; padding: 40px;">
@@ -67,7 +67,7 @@ export async function POST(req: Request) {
 
           <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(201,169,110,0.1); text-align: center;">
             <p style="font-size: 11px; color: #a09890; letter-spacing: 0.1em;">R&M Company · Luxury Renovation · Toronto</p>
-            <p style="font-size: 11px; color: #a09890;">+1 (250) 884-2728 · arabgol.reihane.official@gmail.com</p>
+            <p style="font-size: 11px; color: #a09890;">+1 (647) 614-4437 · shakeri.mojtaba.official@gmail.com</p>
           </div>
         </div>
       `,
@@ -89,7 +89,7 @@ export async function POST(req: Request) {
           <p style="color: #a09890; line-height: 1.8; margin-bottom: 32px;">We look forward to learning more about your project and exploring how we can bring your vision to life.</p>
           <div style="text-align: center; padding: 24px; border: 1px solid rgba(201,169,110,0.2);">
             <p style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a96e; margin: 0 0 8px;">Questions in the meantime?</p>
-            <p style="color: #e8dcc8; margin: 0;">+1 (250) 884-2728</p>
+            <p style="color: #e8dcc8; margin: 0;">+1 (647) 614-4437</p>
           </div>
           <div style="margin-top: 40px; text-align: center;">
             <p style="font-size: 11px; color: #a09890;">R&M Company · Luxury Renovation · Toronto</p>
