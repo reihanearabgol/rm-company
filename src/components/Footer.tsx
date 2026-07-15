@@ -75,7 +75,7 @@ function IconEmail() {
 const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com/r_m_renovation_',            Icon: RiInstagramLine },
   { label: 'WhatsApp',  href: 'https://wa.me/16476144437',                         Icon: RiWhatsappLine  },
-  { label: 'Telegram',  href: 'https://t.me/RMCompanyBot',                     Icon: RiTelegramLine  },
+  { label: 'Telegram',  href: 'https://t.me/RMCompanyOfficialBot?start=website',                     Icon: RiTelegramLine  },
   { label: 'Email',     href: 'mailto:shakeri.mojtaba.official@gmail.com',         Icon: RiMailLine      },
 ]
 
