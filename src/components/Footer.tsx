@@ -74,9 +74,9 @@ function IconEmail() {
 
 const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com/r_m_renovation_',            Icon: RiInstagramLine },
-  { label: 'WhatsApp',  href: 'https://wa.me/12508842728',                         Icon: RiWhatsappLine  },
+  { label: 'WhatsApp',  href: 'https://wa.me/16476144437',                         Icon: RiWhatsappLine  },
   { label: 'Telegram',  href: 'https://t.me/r_m_renovation_',                     Icon: RiTelegramLine  },
-  { label: 'Email',     href: 'mailto:arabgol.reihane.official@gmail.com',         Icon: RiMailLine      },
+  { label: 'Email',     href: 'mailto:shakeri.mojtaba.official@gmail.com',         Icon: RiMailLine      },
 ]
 
 export default function Footer() {
@@ -136,13 +136,13 @@ export default function Footer() {
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '2.5rem' }}>
-              <a className="f-contact" href="tel:+12508842728"
+              <a className="f-contact" href="tel:+16476144437"
                 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, transition: 'opacity 0.25s' }}>
-                +1 (250) 884-2728
+                +1 (647) 614-4437
               </a>
-              <a className="f-contact" href="mailto:arabgol.reihane.official@gmail.com"
+              <a className="f-contact" href="mailto:shakeri.mojtaba.official@gmail.com"
                 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, transition: 'opacity 0.25s' }}>
-                arabgol.reihane.official@gmail.com
+                shakeri.mojtaba.official@gmail.com
               </a>
             </div>
 
