@@ -153,19 +153,6 @@ export default function Testimonials({
           </div>
 
           {/* Stats bar */}
-          <div style={{ marginTop: isMobile ? '2.5rem' : '5rem', paddingTop: isMobile ? '2rem' : '3rem', borderTop: '1px solid rgba(201,169,110,0.1)', display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '0' }}>
-            {[
-              { num: satisfaction, label: 'Client Satisfaction' },
-              { num: projects, label: 'Projects Completed' },
-              { num: years, label: 'Years of Excellence' },
-              { num: review, label: 'Average Review' },
-            ].map((stat, i) => (
-              <div key={i} style={{ textAlign: 'center', padding: isMobile ? '1.5rem 0' : '0 2rem', borderRight: isMobile ? 'none' : (i < 3 ? '1px solid rgba(201,169,110,0.12)' : 'none'), borderBottom: isMobile ? '1px solid rgba(201,169,110,0.08)' : 'none' }}>
-                <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '3rem', fontWeight: 300, color: '#c9a96e', lineHeight: 1, display: 'block', marginBottom: '0.5rem' }}>{stat.num}</span>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#a09890' }}>{stat.label}</span>
-              </div>
-            ))}
-          </div>
 
           {/* CTA */}
           <div style={{ marginTop: isMobile ? '2.5rem' : '4rem', textAlign: 'center', padding: '2.5rem', border: '1px solid rgba(201,169,110,0.15)', background: 'rgba(201,169,110,0.04)' }}>

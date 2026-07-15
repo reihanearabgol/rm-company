@@ -3,9 +3,8 @@ import { Resend } from 'resend'
 import { kv } from '@vercel/kv'
 import { generateLeadId, leadKey, LEADS_LIST_KEY } from '@/lib/leads'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await req.json()
     const { fullName, email, phone, projectType, address, city, postalCode, description, budget, contactMethod, timeline, referral } = body

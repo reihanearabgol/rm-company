@@ -47,10 +47,10 @@ export const DEFAULT_CONTENT: SiteContent = {
     ctaSecondary: 'Discover Spaces',
   },
   contact: {
-    phone: '+1 (250) 884-2728',
-    email: 'arabgol.reihane.official@gmail.com',
-    address: '1702-135 Antibes Drive',
-    city: 'North York, ON M2R 2Z1',
+    phone: '+1 (647) 614-4437',
+    email: 'shakeri.mojtaba.official@gmail.com',
+    address: '135 Antibes Drive',
+    city: 'North York',
   },
   footer: {
     copyright: '© 2024 R&M Company. All rights reserved.',

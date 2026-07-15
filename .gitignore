@@ -9,3 +9,5 @@ out/
 .env*
 public/video/
 public/video/
+
+/src/generated/prisma

@@ -53,12 +53,7 @@ export default async function Home() {
         phone={content.contact.phone}
         email={content.contact.email}
       />
-      <Footer
-        copyright={content.footer.copyright}
-        tagline={content.footer.tagline}
-        phone={content.contact.phone}
-        email={content.contact.email}
-      />
+      <Footer />
     </main>
   )
 }
